@@ -1,0 +1,16 @@
+CATATAN LISENSI AUDIO — GRAPHMATH
+Tanggal paket: 17 Oktober 2026
+
+Efek suara berikut sudah dipasang secara teknis ke dalam proyek: jawab benar, jawab salah, aww (0–4), ding (5–7), tepuk tangan (5–7), dan yay (8–10). Backsound utama dan audio intro juga dipertahankan.
+
+PENTING: lisensi dan izin publikasi dari sumber asli belum dapat dikonfirmasi untuk semua audio yang diunggah. Penyebutan “no copyright” pada nama berkas/judul video tidak otomatis membuktikan izin penggunaan ulang, modifikasi, atau distribusi dalam game yang dipublikasikan secara online.
+
+Sebelum publikasi GitHub Pages, buka sumber asli setiap sound dan periksa ketentuan lisensi secara khusus, termasuk penggunaan ulang, modifikasi, atribusi, dan penggunaan pada website/game. Simpan tangkapan layar/tautan bukti lisensi bila diperlukan. Jika lisensi tidak ditemukan atau tidak membolehkan penggunaan tersebut, ganti dengan audio yang izin dan ketentuannya jelas.
+
+File audio terpisah di folder media/:
+- sound-answer-correct.mp3
+- sound-answer-incorrect.mp3
+- sound-test-aww.mp3
+- sound-test-ding.mp3
+- sound-test-applause.mp3
+- sound-test-yay.mp3

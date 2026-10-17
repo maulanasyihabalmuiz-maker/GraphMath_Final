@@ -1,0 +1,56 @@
+GRAPHMATH — TAHAP 3 REVISI
+Media Pembelajaran Matematika
+
+IDENTITAS PENGEMBANG
+Nama: Maulana Syihab Al Muiz
+NIM: 250311617964
+Offering: C
+Mata Kuliah: Media Pembelajaran Matematika
+
+REVISI YANG DITERAPKAN
+1. Menambahkan halaman identitas pengembang sebelum Lobby.
+2. Menambahkan halaman “Tentang Media” yang memuat ringkasan CP terkait, TP, deskripsi media, dan alur penggunaan.
+3. Menyatukan materi gradien dan persamaan garis dalam satu bagian terpadu: rumus gradien dari dua titik, substitusi nilai m ke y = mx + b, dan contoh mencari konstanta b.
+4. Memperjelas rumus gradien m = (y2-y1)/(x2-x1), ditampilkan pada video materi dan ringkasan materi.
+5. Mengubah misi Level 6 menjadi penerapan kontekstual jalur menurun melalui titik A(0,5) dan B(5,0), menghasilkan y = -x + 5.
+6. Menghapus track narasi sintetis dari video Materi dan Tutorial sesuai keputusan pengembang; keduanya tetap menyajikan materi secara visual.
+7. Menggunakan MP3 backsound pilihan pengembang dengan nama file baru, kontrol hidup/mati dan volume default 15%; musik diputar hanya di Lobby dan area permainan.
+8. Menambahkan tes akhir berisi 10 soal, nilai skala 0–100, umpan balik, dan pembahasan setelah Level 6.
+9. Menjaga fitur dunia 2D, koordinat, jalur grafik, karakter, portal, checkpoint, skor, dan penyimpanan progres lokal.
+
+TUJUAN PEMBELAJARAN OPERASIONAL
+- Menentukan posisi titik pada bidang koordinat Kartesius.
+- Menghitung nilai fungsi dari input tertentu.
+- Menghitung gradien dua titik menggunakan m = (y2-y1)/(x2-x1).
+- Menentukan persamaan fungsi linear berbentuk y = mx + b.
+- Menghubungkan persamaan dengan grafik dan menerapkan konsep pada konteks sederhana.
+
+PENGUJIAN OTOMATIS YANG DILAKUKAN PADA PAKET
+- Sintaks JavaScript diperiksa dengan Node.js tanpa error.
+- Sintaks Python untuk generator video dan backsound diperiksa.
+- Referensi ID HTML dari app.js dan revisions.js diperiksa; tidak ada ID yang hilang dari daftar referensi statis.
+- Kedua MP4 diperiksa dengan ffprobe; masing-masing hanya memiliki stream video tanpa audio narasi.
+- Backsound MP3 pilihan pengembang tersedia sebagai aset lokal.
+
+PEMERIKSAAN MANUAL YANG MASIH DISARANKAN
+- Uji klik seluruh tombol dan alur dari identitas hingga Lobby, keenam level, checkpoint, dan tes akhir.
+- Putar kedua video untuk memastikan tidak ada narasi; uji backsound pilihan pada Lobby/game dan cek pengaturan volume di HP serta laptop.
+- Uji ukuran layar ponsel, isi semua soal tes, dan pastikan skor serta pembahasan muncul sesuai pilihan jawaban.
+- Uji di deployment GitHub Pages setelah aset diperbarui.
+
+CATATAN
+Video Materi dan Tutorial sengaja tidak memiliki narasi. Pastikan lisensi backsound pilihan pengembang mengizinkan publikasi di website. Hasil tes tersimpan lokal di browser dan tidak dikirim otomatis ke dosen. CP di halaman Tentang Media adalah ringkasan terkait Fase D, bukan kutipan lengkap dokumen CP resmi.
+
+
+REVISI INTRO MINIMALIS (17 Oktober 2026)
+- Intro sinematik 8 detik disederhanakan: latar hijau gelap, grid koordinat tipis, kurva grafik, portal minimalis, partikel lembut, dan judul GraphMath.
+- Audio intro adalah sound design orisinal (pad lembut, whoosh, dan chime singkat) pada intro-graphmath.mp4; tanpa narasi. File sumber audionya tersedia sebagai media/intro-sound-graphmath.mp3.
+- Backsound permainan tetap menggunakan media/backsound-petualangan-v3.mp3 dan mulai dari awal ketika Lobby tampil. Kedua audio tidak diputar bersamaan.
+
+
+REVISI EFEK SUARA JAWABAN DAN TES AKHIR (17 Oktober 2026)
+- Jawaban misi benar memutar media/sound-answer-correct.mp3.
+- Jawaban misi salah memutar media/sound-answer-incorrect.mp3.
+- Hasil tes 0–4 benar memutar sound-test-aww.mp3; 5–7 benar memutar sound-test-ding.mp3 lalu sound-test-applause.mp3 sebagai dua file terpisah; 8–10 benar memutar sound-test-yay.mp3.
+- Efek suara tidak digabung menjadi satu berkas audio.
+- CATATAN LISENSI: izin publikasi seluruh audio unduhan dan backsound game masih perlu diverifikasi dari sumber aslinya. Jangan menyebutnya royalty-free atau menganggap izin publikasi sudah dipastikan sampai ketentuan sumber diperiksa.

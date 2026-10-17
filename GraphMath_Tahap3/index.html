@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#073b2c">
+  <meta name="description" content="GraphMath adalah media pembelajaran matematika tentang koordinat Kartesius, fungsi, gradien, dan grafik fungsi.">
+  <title>GraphMath — Petualangan di Dunia Koordinat</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app-shell">
+  <header class="topbar">
+    <button class="brand" data-go="homePage" aria-label="Kembali ke menu utama">
+      <span class="brand-icon">G<span>↗</span></span>
+      <span class="brand-copy"><strong>GraphMath</strong><small>Belajar · Jelajah · Pecahkan</small></span>
+    </button>
+    <div class="topbar-right">
+      <span class="status-pill"><i></i> OFFLINE READY</span>
+      <span class="status-pill" id="headerLevel">LEVEL 1</span>
+      <button class="icon-button" id="headerSettings" aria-label="Pengaturan" title="Pengaturan">⚙</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- IDENTITAS PENGEMBANG: tampil sebelum Lobby -->
+    <section class="page active" id="introPage">
+      <div class="intro-scene panel">
+        <div class="intro-decoration"><div class="intro-orbit"></div><div class="intro-mini-grid"><span>y</span><i></i><b>↗</b><small>x</small></div><div class="intro-portal"><span></span></div></div>
+        <div class="intro-copy">
+          <span class="eyebrow light">MEDIA PEMBELAJARAN MATEMATIKA</span>
+          <h1>Graph<span>Math</span></h1>
+          <p class="intro-subtitle">Petualangan di Dunia Koordinat</p>
+          <div class="identity-card">
+            <div><small>Nama</small><strong>Maulana Syihab Al Muiz</strong></div>
+            <div><small>NIM</small><strong>250311617964</strong></div>
+            <div><small>Offering</small><strong>C</strong></div>
+            <div><small>Mata Kuliah</small><strong>Media Pembelajaran Matematika</strong></div>
+          </div>
+          <p class="intro-note">Game edukasi berbasis eksplorasi koordinat, fungsi linear, dan grafik fungsi.</p>
+          <button class="btn btn-gold btn-large" id="enterGame">Masuk ke GraphMath <span aria-hidden="true">→</span></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOME / LOBBY -->
+    <section class="page" id="homePage">
+      <div class="hero-scene panel">
+        <div class="hero-copy">
+          <span class="eyebrow light">GAME EDUKASI MATEMATIKA · SINGLE PLAYER</span>
+          <h1>Petualangan di<br><em>Dunia Koordinat</em></h1>
+          <p>Temukan fungsi yang tepat, gambarkan jalurnya, dan buka portal menuju tantangan berikutnya.</p>
+          <div class="hero-actions">
+            <button class="btn btn-gold btn-large" id="homeStart">▶ Mulai Petualangan</button>
+            <button class="btn btn-glass btn-large" id="homeContinue">Lanjutkan</button>
+          </div>
+          <div class="home-menu-grid">
+            <button class="menu-tile" id="homeMaterial"><span>▤</span><b>Materi</b><small>Pelajari konsep</small></button>
+            <button class="menu-tile" id="homeTutorial"><span>▷</span><b>Tutorial</b><small>Pelajari cara bermain</small></button>
+            <button class="menu-tile" id="homeLevel"><span>✦</span><b>Pilih Level</b><small>Lihat progresmu</small></button>
+            <button class="menu-tile" id="homeSettings"><span>⚙</span><b>Pengaturan</b><small>Atur progres game</small></button>
+            <button class="menu-tile" id="homeAbout"><span>ⓘ</span><b>Tentang Media</b><small>CP, TP, deskripsi</small></button>
+            <button class="menu-tile hidden" id="homeTest"><span>✓</span><b>Tes Akhir</b><small>Evaluasi 10 soal</small></button>
+          </div>
+        </div>
+        <div class="hero-art" aria-label="Ilustrasi dunia GraphMath">
+          <div class="sun-glow"></div><div class="cloud cloud-a"></div><div class="cloud cloud-b"></div>
+          <div class="floating-island island-back"><span class="tiny-tree"></span></div>
+          <div class="floating-island island-main"><span class="tree tree-one"></span><span class="tree tree-two"></span></div>
+          <div class="path-doodle"></div>
+          <div class="hero-axis"><span>Y</span><span>X</span><svg viewBox="0 0 420 250" role="img" aria-label="Contoh grafik fungsi"><path d="M32 208 H394 M58 232 V20"/><path class="curve" d="M63 190 L120 164 L177 138 L234 112 L291 86 L348 60"/><circle cx="63" cy="190" r="5"/><circle cx="348" cy="60" r="7"/></svg></div>
+          <div class="hero-player" aria-hidden="true"><span class="player-hair"></span><span class="player-face"></span><span class="player-body"></span><span class="player-pack"></span><span class="player-leg leg-a"></span><span class="player-leg leg-b"></span></div>
+          <div class="portal portal-home"><span></span><i></i></div>
+          <div class="hero-caption"><span class="caption-dot"></span> Sebuah dunia, banyak tantangan matematika</div>
+        </div>
+      </div>
+      <div class="home-bottom-grid">
+        <article class="panel mini-feature"><span class="feature-icon">⌖</span><div><b>Koordinat Kartesius</b><p>Kenali posisi titik dan lokasi tujuan.</p></div></article>
+        <article class="panel mini-feature"><span class="feature-icon blue">〽</span><div><b>Fungsi & Grafik</b><p>Ubah persamaan menjadi jalur visual.</p></div></article>
+        <article class="panel mini-feature"><span class="feature-icon gold">✦</span><div><b>Misi & Checkpoint</b><p>Selesaikan tantangan dan lanjutkan progres.</p></div></article>
+      </div>
+    </section>
+
+    <!-- MATERIAL VIDEO -->
+    <section class="page" id="materialPage">
+      <div class="page-heading"><div><span class="eyebrow">LEARNING MATERIAL</span><h1>Materi Pembelajaran</h1><p>Pelajari konsep yang akan digunakan dalam petualangan GraphMath.</p></div><button class="btn btn-secondary" data-go="homePage">← Menu Utama</button></div>
+      <div class="media-layout">
+        <section class="panel video-panel">
+          <div class="video-frame"><video id="materialVideo" controls playsinline preload="metadata" poster="media/materi-poster.jpg"><source src="media/materi-dasar.mp4" type="video/mp4">Browser kamu tidak mendukung pemutaran video.</video></div>
+          <div class="video-under"><div><b>Materi Dasar GraphMath</b><p>Video visual tanpa narasi suara. Pelajari konsep dari teks dan ilustrasi pada setiap slide.</p></div><span class="tag">VIDEO VISUAL</span></div>
+        </section>
+        <aside class="panel side-panel">
+          <h2>Ringkasan Materi</h2>
+          <div class="chapter-list">
+            <button class="chapter active" data-video="materialVideo" data-seek="11.0"><span>01</span><b>Koordinat Kartesius</b><small>Posisi (x, y), sumbu, dan kuadran</small></button>
+            <button class="chapter" data-video="materialVideo" data-seek="23.5"><span>02</span><b>Konsep Fungsi</b><small>Hubungan input dan output</small></button>
+            <button class="chapter" data-video="materialVideo" data-seek="36.0"><span>03</span><b>Gradien dan Persamaan Garis</b><small>Rumus dua titik → y = mx + b → contoh</small></button>
+            <button class="chapter" data-video="materialVideo" data-seek="79.0"><span>04</span><b>Grafik Menjadi Jalur</b><small>Persamaan, garis, dan portal</small></button>
+          </div>
+          <div class="note-box"><b>Tips belajar</b><p>Catat koordinat, pahami gradien, lalu substitusikan titik untuk mencari konstanta.</p></div>
+          <div class="btn-row"><button class="btn btn-secondary" data-go="homePage">Kembali</button><button class="btn btn-secondary" id="skipMaterial">Lewati Video</button><button class="btn btn-primary" id="materialToLevels">Pilih Level →</button></div>
+        </aside>
+      </div>
+      <section class="lesson-reference panel">
+        <div class="lesson-heading"><span class="eyebrow">RINGKASAN BELAJAR</span><h2>Konsep inti GraphMath</h2><p>Gunakan ringkasan ini setelah menonton video atau ketika mengulang materi sebelum bermain.</p></div>
+        <div class="lesson-grid">
+          <article class="lesson-card"><span>01</span><h3>Koordinat Kartesius</h3><p>Titik ditulis sebagai pasangan terurut <strong>(x, y)</strong>. Nilai x dibaca mendatar, lalu nilai y dibaca tegak. Titik pusat adalah O(0, 0).</p></article>
+          <article class="lesson-card"><span>02</span><h3>Fungsi</h3><p>Fungsi memasangkan setiap input dengan tepat satu output. Contoh: jika <strong>f(x) = 2x + 1</strong>, maka f(3) = 7.</p></article>
+          <article class="lesson-card lesson-card-highlight"><span>03</span><h3>Gradien dan Persamaan Garis</h3><div class="lesson-formula">m = (y₂ − y₁) / (x₂ − x₁)</div><p>Gunakan dua titik untuk menghitung gradien m. Setelah itu, substitusikan ke <strong>y = mx + b</strong> dan gunakan salah satu titik untuk mencari b.</p><div class="lesson-example">A(2, 3), B(6, 11) → m = 2 → y = 2x − 1</div></article>
+          <article class="lesson-card"><span>04</span><h3>Grafik menjadi jalur</h3><p>Persamaan linear membentuk garis pada bidang koordinat. Dalam game, garis yang benar menjadi jalur visual untuk mencapai portal.</p></article>
+        </div>
+      </section>
+    </section>
+
+    <!-- TUTORIAL VIDEO -->
+    <section class="page" id="tutorialPage">
+      <div class="page-heading"><div><span class="eyebrow">HOW TO PLAY</span><h1>Tutorial Gameplay</h1><p>Ikuti alur permainan sebelum memulai misi pertamamu.</p></div><button class="btn btn-secondary" data-go="homePage">← Menu Utama</button></div>
+      <div class="media-layout">
+        <section class="panel video-panel">
+          <div class="video-frame"><video id="tutorialVideo" controls playsinline preload="metadata" poster="media/tutorial-poster.jpg"><source src="media/tutorial-gameplay.mp4" type="video/mp4">Browser kamu tidak mendukung pemutaran video.</video></div>
+          <div class="video-under"><div><b>Cara Bermain GraphMath</b><p>Demonstrasi visual tanpa narasi suara. Instruksi utama ditampilkan pada layar.</p></div><span class="tag">VIDEO VISUAL</span></div>
+        </section>
+        <aside class="panel side-panel">
+          <h2>Langkah-Langkah</h2>
+          <div class="tutorial-steps">
+            <div><span>1</span><p><b>Amati map</b><small>Perhatikan titik pemain dan portal.</small></p></div>
+            <div><span>2</span><p><b>Pahami misi</b><small>Baca koordinat atau informasi cerita.</small></p></div>
+            <div><span>3</span><p><b>Hitung jawaban</b><small>Gunakan konsep yang sesuai dengan level.</small></p></div>
+            <div><span>4</span><p><b>Masukkan jawaban</b><small>Ketik fungsi atau nilai pada kolom.</small></p></div>
+            <div><span>5</span><p><b>Ikuti grafik</b><small>Jika benar, jalur terbentuk menuju portal.</small></p></div>
+          </div>
+          <div class="note-box"><b>Ingat</b><p>Jawaban salah bukan akhir permainan. Baca feedback, periksa langkahmu, lalu coba kembali.</p></div>
+          <div class="btn-row"><button class="btn btn-secondary" data-go="homePage">Kembali</button><button class="btn btn-gold" id="tutorialPlay">Mulai Bermain →</button></div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- TENTANG MEDIA: CP, TP, DESKRIPSI -->
+    <section class="page" id="infoPage">
+      <div class="page-heading"><div><span class="eyebrow">INFORMASI PEMBELAJARAN</span><h1>Tentang Media GraphMath</h1><p>Landasan pembelajaran, tujuan, dan cara kerja media.</p></div><button class="btn btn-secondary" data-go="homePage">← Menu Utama</button></div>
+      <div class="info-hero panel"><div class="info-symbol">G↗</div><div><h2>GraphMath — Petualangan di Dunia Koordinat</h2><p>Game edukasi matematika berbasis eksplorasi bidang koordinat. Pemain memecahkan misi secara mandiri dan melihat hubungan persamaan dengan grafik secara visual.</p></div></div>
+      <div class="info-grid">
+        <article class="panel info-card"><span class="eyebrow">01 · CAPAIAN PEMBELAJARAN</span><h2>CP terkait — Matematika Fase D</h2><p>Rumusan ringkas yang relevan dengan fokus media: peserta didik memahami dan menyajikan relasi serta fungsi, dan menggunakan konsep dan keterampilan matematika untuk menyelesaikan masalah kontekstual.</p><small>Catatan: rumusan ini merupakan ringkasan terpilih, bukan kutipan lengkap CP resmi. Penerapannya perlu disesuaikan dengan ATP yang digunakan sekolah. <a href="https://guru.kemendikdasmen.go.id/kurikulum/referensi-penerapan/capaian-pembelajaran/sd-sma/matematika/fase-d/" target="_blank" rel="noopener">Lihat referensi resmi CP Matematika Fase D.</a></small></article>
+        <article class="panel info-card"><span class="eyebrow">02 · TUJUAN PEMBELAJARAN</span><h2>Setelah menggunakan media</h2><ol><li>Membaca dan menentukan titik pada bidang koordinat Kartesius.</li><li>Menentukan nilai fungsi dari input yang diberikan.</li><li>Menghitung gradien dua titik dengan rumus <strong>m = (y₂ − y₁) / (x₂ − x₁)</strong>.</li><li>Menentukan persamaan fungsi linear berbentuk <strong>y = mx + b</strong>.</li><li>Menghubungkan persamaan dan grafik serta menerapkan konsep pada soal kontekstual sederhana.</li></ol></article>
+        <article class="panel info-card"><span class="eyebrow">03 · DESKRIPSI MEDIA</span><h2>Media interaktif dan visual</h2><p>GraphMath adalah game pembelajaran berbasis web yang mengintegrasikan koordinat Kartesius, fungsi, fungsi linear, gradien, dan grafik fungsi. Peserta didik membaca misi, mengetik jawaban matematika, menerima umpan balik, lalu melihat garis fungsi menjadi jalur menuju portal.</p><p>Media menyediakan enam level, ringkasan materi, tutorial, petunjuk, skor, checkpoint, tes akhir, dan penyimpanan progres di browser. Video materi dan tutorial berupa visual tanpa narasi suara; backsound hanya diputar di Lobby dan saat bermain.</p></article>
+        <article class="panel info-card"><span class="eyebrow">04 · ALUR PENGGUNAAN</span><h2>Belajar sambil menjelajah</h2><ol><li>Baca identitas pengembang dan masuk ke lobby.</li><li>Pelajari materi atau tutorial jika diperlukan.</li><li>Pilih level dan amati titik awal, titik tujuan, serta misi.</li><li>Hitung jawaban dan periksa melalui sistem.</li><li>Ikuti jalur grafik menuju portal dan lanjutkan sampai tes akhir.</li></ol></article>
+      </div>
+      <div class="info-actions"><button class="btn btn-gold btn-large" data-go="homePage">Kembali ke Lobby</button><button class="btn btn-primary btn-large" id="infoStart">Mulai Petualangan →</button></div>
+    </section>
+
+    <!-- LEVEL MAP -->
+    <section class="page" id="levelsPage">
+      <div class="page-heading"><div><span class="eyebrow">PETA PETUALANGAN</span><h1>Pilih Level</h1><p>Materi berkembang dari pengenalan koordinat menuju tantangan gabungan.</p></div><button class="btn btn-secondary" data-go="homePage">← Menu Utama</button></div>
+      <div class="level-map-banner"><div><b>Perjalanan GraphMath</b><p>Selesaikan misi untuk membuka level berikutnya. Progres tersimpan di browser ini.</p></div><div class="progress-wrap"><div class="progress-caption"><span>Progres level</span><b id="progressText">0 / 6</b></div><div class="progress-track"><span id="progressFill"></span></div></div></div>
+      <div class="level-grid" id="levelGrid"></div>
+      <div class="map-footer"><span class="map-key"><i class="key-open"></i>Tersedia</span><span class="map-key"><i class="key-done"></i>Selesai</span><span class="map-key"><i class="key-locked"></i>Terkunci</span><span class="map-note">Tip: gunakan menu Materi jika kamu perlu mengulang konsep.</span></div>
+    </section>
+
+    <!-- GAMEPLAY -->
+    <section class="page" id="gamePage">
+      <div class="game-topline"><div><span class="eyebrow">MISI PETUALANGAN</span><h1 id="gameHeading">Level 1 — Koordinat Kartesius</h1></div><div class="game-top-actions"><span class="hud-pill">✦ <b id="hudScore">0</b></span><span class="hud-pill">♥ <b id="hudLives">∞</b></span><button class="icon-button light" id="gameHome" title="Simpan dan kembali ke menu" aria-label="Simpan dan kembali">⌂</button><button class="icon-button light" id="gameHelp" title="Buka tutorial" aria-label="Buka tutorial">?</button></div></div>
+      <div class="game-layout">
+        <section class="panel world-panel">
+          <div class="world-top-label"><span id="worldLevelLabel">LEVEL 1</span><span id="worldStatus">TEMUKAN PORTAL</span><span class="world-stars">☆ ☆ ☆</span></div>
+          <div class="world-canvas-wrap"><canvas id="gameCanvas" width="1000" height="660" aria-label="Dunia permainan GraphMath dengan koordinat Kartesius"></canvas></div>
+          <div class="world-legend"><span><i class="legend-player"></i>Pemain</span><span><i class="legend-portal"></i>Portal</span><span><i class="legend-line"></i>Grafik fungsi</span><span><i class="legend-grid"></i>Bidang koordinat</span></div>
+        </section>
+        <aside class="game-sidebar">
+          <section class="panel mission-panel">
+            <div class="panel-heading"><div><span class="eyebrow">OBJECTIVE</span><h2 id="missionTitle">Misi 1</h2></div><span class="mission-badge" id="difficultyBadge">MUDAH</span></div>
+            <div class="mission-content">
+              <div class="mission-story" id="missionStory"></div>
+              <div class="dynamic-facts" id="dynamicFacts"></div>
+              <label for="answerInput" id="answerLabel">Jawabanmu</label>
+              <div class="answer-row"><span class="answer-prefix" id="answerPrefix">(x, y)</span><input id="answerInput" type="text" placeholder="Ketik jawaban..." autocomplete="off" spellcheck="false"></div>
+              <p class="answer-help" id="answerHelp">Masukkan jawaban sesuai format yang diminta.</p>
+              <div class="button-row"><button class="btn btn-primary" id="checkAnswer">Periksa Jawaban</button><button class="btn btn-secondary" id="hintAnswer">Petunjuk</button></div>
+              <div class="feedback" id="gameFeedback" role="status" aria-live="polite"></div>
+              <div class="button-row hidden" id="successActions"><button class="btn btn-gold" id="moveToPortal">Ikuti Jalur →</button></div>
+            </div>
+          </section>
+          <section class="panel mini-stats-panel"><div class="panel-heading"><h2>Progres</h2></div><div class="mini-stats"><div><small>SKOR</small><b id="scoreValue">0</b></div><div><small>COBAAN</small><b id="triesValue">0</b></div><div><small>LEVEL</small><b id="levelValue">1</b></div></div></section>
+          <section class="panel how-panel"><div class="panel-heading"><h2>Ingat langkahmu</h2></div><ol id="miniInstructions"><li>Baca instruksi dan amati map.</li><li>Selesaikan tantangan matematika.</li><li>Periksa jawaban, lalu ikuti jalur.</li></ol></section>
+        </aside>
+      </div>
+    </section>
+
+    <!-- TES AKHIR -->
+    <section class="page" id="testPage">
+      <div class="page-heading"><div><span class="eyebrow">EVALUASI PEMBELAJARAN</span><h1>Tes Akhir GraphMath</h1><p>Jawab 10 soal untuk melihat pemahamanmu tentang koordinat, fungsi, gradien, dan grafik.</p></div><span class="tag">10 SOAL · NILAI 0–100</span></div>
+      <div class="test-instructions panel"><strong>Petunjuk:</strong> pilih satu jawaban untuk setiap soal. Tekan “Periksa Hasil” setelah semua soal dijawab. Setiap soal bernilai 10 poin.</div>
+      <form id="finalTestForm"><div id="testQuestions" class="test-question-list"></div><div id="testNotice" class="test-notice" role="status" aria-live="polite"></div><div class="test-submit-row"><button class="btn btn-gold btn-large" id="submitFinalTest" type="submit">Periksa Hasil Tes</button></div></form>
+      <section id="testResult" class="panel test-result hidden" aria-live="polite"><span class="eyebrow">HASIL EVALUASI</span><h2 id="testResultTitle">Hasil Tes</h2><div class="test-score-number"><strong id="testScoreNumber">0</strong><span>/ 100</span></div><p id="testResultMessage"></p><div id="testReview" class="test-review"></div><div class="info-actions"><button class="btn btn-secondary" id="retryTest" type="button">Ulangi Tes</button><button class="btn btn-primary" id="testHome" type="button">Kembali ke Lobby</button></div></section>
+    </section>
+
+    <!-- CHECKPOINT -->
+    <section class="page" id="checkpointPage">
+      <div class="checkpoint-scene panel"><div class="checkpoint-portal"><span>✓</span></div><span class="eyebrow light">CHECKPOINT TERCAPAI</span><h1 id="checkpointTitle">Level Selesai!</h1><p id="checkpointMessage">Kamu berhasil menyelesaikan misi.</p><div class="checkpoint-score"><div><small>SKOR TOTAL</small><b id="checkpointScore">100</b></div><div><small>COBAAN</small><b id="checkpointTries">1</b></div><div><small>LEVEL TUNTAS</small><b id="checkpointCompleted">1 / 6</b></div></div><div class="checkpoint-actions"><button class="btn btn-gold btn-large" id="checkpointNext">Level Berikutnya →</button><button class="btn btn-glass btn-large" id="checkpointMap">Kembali ke Peta</button><button class="btn btn-glass btn-large" id="checkpointHome">Menu Utama</button></div></div>
+    </section>
+  </main>
+  <footer class="site-footer">GraphMath · Game edukasi matematika offline · Dibuat dengan HTML, CSS, dan JavaScript</footer>
+</div>
+
+<div class="modal-backdrop" id="settingsModal" role="dialog" aria-modal="true" aria-labelledby="settingsTitle"><div class="modal-box"><button class="modal-close" id="settingsClose" aria-label="Tutup">×</button><span class="eyebrow">PENGATURAN</span><h2 id="settingsTitle">Pengaturan Game</h2><p>GraphMath menyimpan progres pada browser/perangkat ini. Tidak diperlukan akun atau koneksi internet untuk gameplay.</p><div class="setting-row"><div><b>Animasi gerak</b><small>Efek jalur dan perpindahan karakter</small></div><label class="switch"><input type="checkbox" id="motionToggle" checked><span></span></label></div><div class="setting-row"><div><b>Backsound</b><small>Musik latar lembut selama bermain</small></div><label class="switch"><input type="checkbox" id="bgmToggle" checked><span></span></label></div><div class="setting-row"><div><b>Volume musik</b><small>Atur kenyaringan backsound</small></div><input type="range" id="bgmVolume" min="0" max="0.5" step="0.05" value="0.15" aria-label="Volume backsound"></div><div class="setting-row"><div><b>Simpan progres</b><small>Level terbuka dan skor lokal</small></div><button class="btn btn-danger" id="resetProgress">Hapus progres</button></div><div class="button-row"><button class="btn btn-primary" id="settingsDone">Selesai</button></div></div></div>
+
+<!-- CINEMATIC INTRO: diputar setelah pengguna menekan tombol Masuk ke GraphMath -->
+<div class="cinematic-intro hidden" id="cinematicIntro" role="dialog" aria-modal="true" aria-label="Video pembuka GraphMath">
+  <video id="cinematicIntroVideo" playsinline preload="auto" poster="media/intro-graphmath-poster.jpg" aria-label="Intro GraphMath berdurasi delapan detik">
+    <source src="media/intro-graphmath.mp4" type="video/mp4">
+    Browser kamu tidak mendukung pemutaran video.
+  </video>
+  <div class="cinematic-intro-shade" aria-hidden="true"></div>
+  <div class="cinematic-intro-label">GRAPHMATH <span>· PETUALANGAN DI DUNIA KOORDINAT</span></div>
+  <button class="btn btn-gold cinematic-intro-skip" id="skipCinematicIntro" type="button">Lewati intro →</button>
+</div>
+
+<audio id="gameBgm" src="media/backsound-petualangan-v3.mp3?v=3" loop preload="auto"></audio>
+<script src="js/levels.js"></script>
+<script src="js/world.js"></script>
+<script src="js/app.js"></script>
+<script src="js/revisions.js"></script>
+</body>
+</html>
